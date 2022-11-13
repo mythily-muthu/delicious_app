@@ -24,7 +24,7 @@ const Popular = () => {
   return (
     <div>
       <Wrapper>
-        <h3>Trending</h3>
+        <h3>Trending.</h3>
         {loading ? (
           <h3
             style={{
