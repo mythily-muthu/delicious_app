@@ -28,7 +28,7 @@ const Popular = () => {
         {loading ? (
           <h3
             style={{
-              height: "351px",
+              height: "350px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
