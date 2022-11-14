@@ -27,16 +27,17 @@ const Veggie = () => {
       <Wrapper>
         <h3>Top veggie picks</h3>
         {loading ? (
-          <h3
+          <img
             style={{
               height: "20rem",
               display: "flex",
               alignItems: "center",
+
               justifyContent: "center",
             }}
-          >
-            Loading...
-          </h3>
+            src="https://i.pinimg.com/originals/71/28/f4/7128f41b9a653cc70f522bb6f275637f.gif"
+            alt="Loding..."
+          />
         ) : (
           <Splide
             options={{
@@ -53,6 +54,7 @@ const Veggie = () => {
                   <Card>
                     <p>{recipe.title}</p>
                     <img src={recipe.image} alt={recipe.title} />
+                    <Gradient />
                   </Card>
                 </SplideSlide>
               );
@@ -69,18 +71,20 @@ let Wrapper = styled.div`
 `;
 
 let Card = styled.div`
-  min-height: 20rem;
-  border-radius: 2rem;
+  height: 200px;
+  width: 300px;
+  border-radius: 2.5rem;
   overflow: hidden;
   position: relative;
   margin-top: 1.5rem;
+  gap: 2.5rem;
 
   img {
-    border-radius: 2rem;
+    border-radius: 2.5rem;
     position: absolute;
     object-fit: cover;
-    width: 90%;
-    height: 70%;
+    width: 100%;
+    height: 100%;
   }
   p {
     position: absolute;
@@ -96,10 +100,11 @@ let Card = styled.div`
 `;
 
 let Gradient = styled.div`
-  z-index: 10;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
   position: absolute;
-  width: 90%;
-  height: 70%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
 `;
 
 export default Veggie;
