@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 
 let Cuisine = () => {
@@ -22,7 +22,7 @@ let Cuisine = () => {
   }, [params.type]);
 
   return (
-    <div>
+    <Grid>
       {cuisine.map((item) => {
         return (
           <Card key={item.id}>
@@ -31,26 +31,35 @@ let Cuisine = () => {
           </Card>
         );
       })}
-      ;
-    </div>
+    </Grid>
   );
 };
 
+let Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 1rem;
+`;
+
 let Card = styled.div`
-  height: 300px;
-  width: 300px;
+  height: 220px;
+  width: 340px;
   margin-top: 6rem;
-  gap: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+  gap: 1rem;
 
   img {
-    border-radius: 2rem;
+    border-radius: 2px;
     height: 100%;
     width: 100%;
     object-fit: cover;
     overflow: hidden;
+    cursor: pointer;
   }
 
   h3 {
+    margin-top: 1rem;
     font-size: medium;
     font-weight: bold;
     text-align: center;
