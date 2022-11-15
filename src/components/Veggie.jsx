@@ -13,7 +13,7 @@ const Veggie = () => {
 
   const getVeggie = async () => {
     let response = await fetch(
-      `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
+      `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=12&tags=vegetarian`
     );
     let data = await response.json();
     //console.log(data);
@@ -25,7 +25,7 @@ const Veggie = () => {
   return (
     <div>
       <Wrapper>
-        <h3>Top veggie picks</h3>
+        <h2>Top veggie picks</h2>
         {loading ? (
           <img
             style={{
@@ -71,13 +71,14 @@ let Wrapper = styled.div`
 `;
 
 let Card = styled.div`
+  margin-top: 10px;
   height: 200px;
-  width: 300px;
-  border-radius: 2.5rem;
+  width: 270px;
+  border-radius: 2rem;
   overflow: hidden;
   position: relative;
   margin-top: 1.5rem;
-  gap: 2.5rem;
+  gap: 1rem;
 
   img {
     border-radius: 2.5rem;
@@ -89,12 +90,15 @@ let Card = styled.div`
   p {
     position: absolute;
     z-index: 10;
+    bottom: 10%;
     color: white;
     top: 9rem;
     left: 10%;
-    font-weight: 500;
-    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
     display: flex;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
     justify-content: center;
   }
 `;

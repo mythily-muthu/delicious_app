@@ -13,10 +13,10 @@ const Popular = () => {
 
   const getPopular = async () => {
     let response = await fetch(
-      `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
+      `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10`
     );
     let data = await response.json();
-    // console.log(data);
+    console.log(data);
     setPopular(data.recipes);
     setLoading(false);
   };
@@ -24,7 +24,7 @@ const Popular = () => {
   return (
     <div>
       <Wrapper>
-        <h3>Trending</h3>
+        <h2>Our trending picks</h2>
         {loading ? (
           <img
             style={{
@@ -74,6 +74,7 @@ let Card = styled.div`
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
+  gap: 20px;
 
   img {
     border-radius: 2rem;
@@ -84,13 +85,13 @@ let Card = styled.div`
   }
   p {
     position: absolute;
-    bottom: 20px;
+    bottom: 10%;
     padding: 10px;
-    font-size: 22px;
+    font-size: 0.9rem;
     width: 100%;
     z-index: 10;
     color: white;
-    font-weight: 300;
+    font-weight: bold;
     font-family: "Montserrat", sans-serif;
     text-align: center;
     display: flex;
