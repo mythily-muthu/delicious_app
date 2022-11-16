@@ -28,7 +28,8 @@ const Popular = () => {
         {loading ? (
           <img
             style={{
-              height: "350px",
+              height: "150px",
+              width: "200px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
