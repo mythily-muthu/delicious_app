@@ -29,3 +29,6 @@ h4 {
   color: #945d60;
   font-size: large;
 }
+.selected_cuisine {
+  border-bottom: 2px solid red;
+}

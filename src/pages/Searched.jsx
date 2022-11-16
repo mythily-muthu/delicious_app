@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const Searched = () => {
   let [searchedRecipies, setSearchedRecipies] = useState([]);
   let params = useParams();
+  console.log("params", params);
 
   let getSearched = async (name) => {
     let reaponse = await fetch(

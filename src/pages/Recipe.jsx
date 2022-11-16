@@ -26,46 +26,46 @@ const Recipe = () => {
         <img src={details.image} alt={details.title} />
       </div>
       <Info>
-        <Button
-          className={activeTab === "instructions" ? "active" : ""}
-          onClick={() => setActiveTab("instructions")}
-        >
-          Instructions
-        </Button>
-        <Button
-          className={activeTab === "ingredients" ? "active" : ""}
-          onClick={() => setActiveTab("ingredients")}
-        >
-          Ingredients
-        </Button>
+        <ButtonContainer>
+          <Button
+            className={activeTab === "instructions" ? "active" : ""}
+            onClick={() => setActiveTab("instructions")}
+          >
+            Instructions
+          </Button>
+          <Button
+            className={activeTab === "ingredients" ? "active" : ""}
+            onClick={() => setActiveTab("ingredients")}
+          >
+            Ingredients
+          </Button>
+        </ButtonContainer>
         {activeTab === "instructions" && (
           <div>
             <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
             <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
           </div>
         )}
-        ;
+
         {activeTab === "ingredients" && (
-          <ul>
+          <ul className="" style={{ listStyleType: "none", margin: 0 }}>
             {details.extendedIngredients.map((ingredient) => {
               return <li key={ingredient.id}> {ingredient.original}</li>;
             })}
           </ul>
         )}
-        ;
       </Info>
     </DetailWrapper>
   );
 };
 
 let DetailWrapper = styled.div`
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  padding: 50px 20px;
   display: flex;
+  gap: 20px;
 
   .active {
-    background: linear-gradient(35deg, #494949, #313131);
-    color: #945d60;
+    border-bottom: 2px solid red;
   }
   h2 {
     margin-bottom: 2rem;
@@ -79,16 +79,22 @@ let DetailWrapper = styled.div`
   }
 `;
 
+let ButtonContainer = styled.div`
+  display: flex;
+`;
+
 let Button = styled.div`
   padding: 1rem, 2rem;
-  color: white;
-  background-color: #945d60;
-  border: 2px solid white;
+  color: #e58282;
+  /* border: 2px solid white; */
   margin-right: 2rem;
+  cursor: pointer;
 
   font-weight: 600;
 `;
 let Info = styled.div`
-  margin-left: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
 export default Recipe;
