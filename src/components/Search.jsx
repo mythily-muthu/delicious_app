@@ -4,9 +4,19 @@ import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
 const Search = () => {
+  let [input, setInput] = useState("");
+
   return (
     <FormStyle>
-      <input type={"text"} placeholder="Cookies . ." />
+      <Wrap>
+        <input
+          type={"text"}
+          placeholder="Cookies . ."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <FaSearch />
+      </Wrap>
     </FormStyle>
   );
 };
@@ -28,12 +38,29 @@ let FormStyle = styled.div`
     background-color: #e8b0b4;
     font-weight: Bold;
     font-size: large;
+    position: relative;
 
     ::placeholder {
       color: white;
       font-size: large;
       font-weight: bold;
     }
+  }
+`;
+let Wrap = styled.div`
+  display: flex;
+  justify-content: center;
+
+  svg {
+    margin-top: 65px;
+    position: absolute;
+    margin-left: 210px;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    background-color: #e8b0b4;
+    color: white;
+    cursor: pointer;
   }
 `;
 
