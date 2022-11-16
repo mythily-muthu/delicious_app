@@ -8,13 +8,13 @@ const Search = () => {
   let [input, setInput] = useState("");
   let navigate = useNavigate();
 
-  let onHandle = (e) => {
+  let submitHandle = (e) => {
     e.preventDefault();
     navigate("/searched/" + input);
   };
 
   return (
-    <FormStyle onSubmit={onHandle}>
+    <FormStyle onSubmit={submitHandle}>
       <Wrap>
         <input
           type={"text"}

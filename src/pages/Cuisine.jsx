@@ -26,8 +26,10 @@ let Cuisine = () => {
       {cuisine.map((item) => {
         return (
           <Card key={item.id}>
-            <img src={item.image} alt={item.title} />
-            <h3>{item.title}</h3>
+            <Link to={"/recipe/" + item.id}>
+              <img src={item.image} alt={item.title} />
+              <h3>{item.title}</h3>
+            </Link>
           </Card>
         );
       })}
@@ -46,10 +48,10 @@ let Card = styled.div`
   width: 340px;
   margin-top: 6rem;
   background-color: #f2faf0;
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.01) 0px 0px 0px 1px;
   gap: 1rem;
-  border: solid 1px #945d60;
+  border: none;
 
   img {
     height: 100%;
