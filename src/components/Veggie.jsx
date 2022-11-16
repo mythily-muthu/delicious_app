@@ -71,14 +71,15 @@ let Wrapper = styled.div`
 `;
 
 let Card = styled.div`
-  margin-top: 10px;
+  // margin-top: 10px;
   height: 200px;
   width: 270px;
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
-  margin-top: 1.5rem;
+  //margin-top: 1.5rem;
   gap: 1rem;
+  cursor: pointer;
 
   img {
     border-radius: 2.5rem;
@@ -86,21 +87,22 @@ let Card = styled.div`
     object-fit: cover;
     width: 100%;
     height: 100%;
-    cursor: pointer;
   }
   p {
     position: absolute;
+    width: 100%;
     z-index: 10;
-    bottom: 10%;
-    color: white;
+    bottom: 0%;
     top: 9rem;
-    left: 10%;
     font-size: 0.8rem;
     font-weight: bold;
     display: flex;
+    align-items: center;
     font-family: "Montserrat", sans-serif;
     text-align: center;
     justify-content: center;
+    color: #945d60;
+    background-color: white;
   }
 `;
 
@@ -109,7 +111,7 @@ let Gradient = styled.div`
   height: 100%;
   width: 100%;
   position: absolute;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.001));
 `;
 
 export default Veggie;

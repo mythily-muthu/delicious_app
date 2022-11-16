@@ -45,12 +45,13 @@ let Card = styled.div`
   height: 220px;
   width: 340px;
   margin-top: 6rem;
-  box-shadow: rgba(0, 0, 0, 0.26) 0px 10px 36px 0px,
+  background-color: #f2faf0;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
   gap: 1rem;
+  border: solid 1px #945d60;
 
   img {
-    border-radius: 2px;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -63,6 +64,8 @@ let Card = styled.div`
     font-size: medium;
     font-weight: bold;
     text-align: center;
+    background-color: #f2faf0;
+    // background-color: #d9e5d7;
   }
 `;
 

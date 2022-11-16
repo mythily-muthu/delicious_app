@@ -43,19 +43,20 @@ let List = styled.div`
   display: flex;
   justify-content: center;
   gap: 6%;
+  // background-color: #d9e5d7; ;
+  background-color: #f2faf0;
 `;
 
 let SLink = styled.div`
   display: flex;
   gap: 10px;
-  /* flex-direction: column; */
   align-items: center;
-  /* justify-content: center; */
   cursor: pointer;
 
   h3 {
-    color: rgb(115, 213, 35);
+    color: #945d60;
     font-weight: bold;
+
     text-decoration: none !important;
   }
 `;

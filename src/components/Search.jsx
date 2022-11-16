@@ -6,26 +6,34 @@ import { FaSearch } from "react-icons/fa";
 const Search = () => {
   return (
     <FormStyle>
-      <input type={"text"} placeholder="Search"></input>
+      <input type={"text"} placeholder="Cookies . ." />
     </FormStyle>
   );
 };
 
 let FormStyle = styled.div`
   width: 100%;
-
+  display: flex;
+  justify-content: center;
   input {
     margin-top: 3rem;
-    padding: 20px;
+    padding: 13px;
     width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
+    border: solid 1px grey;
     border-radius: 20px;
     color: white;
-    background-color: rgb(115, 213, 35);
-    font-size: Bold;
+    background-color: #e8b0b4;
+    font-weight: Bold;
+    font-size: large;
+
+    ::placeholder {
+      color: white;
+      font-size: large;
+      font-weight: bold;
+    }
   }
 `;
 

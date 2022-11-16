@@ -66,15 +66,19 @@ const Popular = () => {
 
 let Wrapper = styled.div`
   margin: 4rem;
+  //background-color: #f1f8f0;
 `;
 
 let Card = styled.div`
   height: 350px;
   width: 350px;
+  border: solid 5px black
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
   gap: 20px;
+  cursor: pointer;
+  
 
   img {
     border-radius: 2rem;
@@ -82,21 +86,25 @@ let Card = styled.div`
     object-fit: cover;
     width: 100%;
     height: 100%;
-    cursor: pointer;
+    
   }
   p {
     position: absolute;
-    bottom: 10%;
+    bottom: 0%;
     padding: 10px;
     font-size: 0.9rem;
     width: 100%;
     z-index: 10;
-    color: white;
+   
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
     text-align: center;
     display: flex;
+    align-items: center;
     justify-content: center;
+    color: #945d60;
+    background-color:white;
+    height: 50px;
   }
 `;
 
@@ -105,7 +113,7 @@ let Gradient = styled.div`
   height: 100%;
   width: 100%;
   position: absolute;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.001));
 `;
 
 export default Popular;
