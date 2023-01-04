@@ -35,7 +35,7 @@ const Veggie = () => {
               alignItems: "center",
               justifyContent: "center",
             }}
-            src="https://i.pinimg.com/originals/71/28/f4/7128f41b9a653cc70f522bb6f275637f.gif"
+            src="LOADING..."
             alt="Loding..."
           />
         ) : (
